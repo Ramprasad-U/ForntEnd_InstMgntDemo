@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="content">
+      <h1 class="headerText">Welcome to the movies presentation!!!</h1>
+      <p>
+        <span>Click this button to see the movie list:</span> 
+        <button type="button" name="show" (click)="getMovies()">Show Movies</button>
+      </p>
+    </div>
+  </div>
+
+
+
+<p>show-dep works!</p>
+<div *ngIf="departs" class="table-center">
+    <table>
+      <thead>
+        <tr>
+          <th>departmentId</th>
+          <th>DepartmentName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let p of departs'>
+          <td>{{p?.DepartmentId}}</td>
+          <td>{{p?.DepartmentName}}</td>
+        </tr>
+      </tbody>
+    </table>
+ </div>

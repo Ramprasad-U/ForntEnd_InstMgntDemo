@@ -1,0 +1,27 @@
+<p>show-student-info works!</p>
+
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>stdName</th>
+          <th>stdEmail</th>
+          <th>stdGender</th>
+          <th>stdDateofBirth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of studentInfos | paginate: { itemsPerPage: count, currentPage: p }">
+        <!-- <tr *ngFor='let s of studentInfos | paginate: { itemsPerPage: count, currentPage: p }'> -->
+          <td>{{s?.Name}}</td> 
+          <td>{{s?.Email}}</td>
+          <td>{{s?.Gender}}</td>
+          <td>{{s?.DateOfBrith | date : "YYYY-MMM-dd"}}</td>
+        </tr>
+      </tbody>
+    </table>
+ </div>
+   <!--Including the pagination control.-->
+   <div class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>

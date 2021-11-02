@@ -1,0 +1,23 @@
+<p>show-emp works!</p>
+
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>EmployeeName</th>
+          <th>EmployeeEmail</th>
+          <th>EmployeeGender</th>
+          <th>EmployeeDepartmentid</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let p of Employees'>
+          <td>{{p?.EmpName}}</td>
+          <td>{{p?.EmpEmail}}</td>
+          <td>{{p?.EmpGender}}</td>
+          <td>{{p?.DepartmentId}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+ </div>

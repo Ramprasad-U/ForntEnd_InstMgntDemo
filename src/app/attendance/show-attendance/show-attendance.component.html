@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<p>show-attendance works!</p>
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>enrollId</th>
+          <th>attendanceStatus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let p of attdnce'>
+          <td>{{p?.enrollId}}</td>
+          <td>{{p?.attendanceStatus}}</td>
+        </tr>
+      </tbody>
+    </table>
+ </div>
